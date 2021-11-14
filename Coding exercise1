@@ -1,0 +1,44 @@
+package Lesson;
+import java.util.Scanner;
+public class Exercise1 {
+/*	Markah penuh 100
+	Guna scanner input:
+	    Masukkan dua subject dan markah
+	    Nyatakan subjek yang mempunyai markah lebih besar daripada 50, calon di kira lulus
+	    Nyatakan subjek mana yang lebih besar markah dan mana yang lebih kecil  */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner scan = new Scanner (System.in);	
+    final int fullmarks = 100;
+    
+    System.out.println("Please insert subject 1. ");
+	String subject1 = scan.nextLine();
+	System.out.println("Please insert subject 2. ");
+	String subject2 = scan.nextLine();
+	System.out.println("Please insert your mark for subject 1. ");
+	int mark1 = scan.nextInt();
+	System.out.println("Please insert your mark for subject 2. ");
+	int mark2 = scan.nextInt();
+	
+	if(mark1 > 50) {
+	System.out.println("Congratulations! You have passed " + subject1 + " exam.");	
+	}
+	else 
+	System.out.println("You have failed " + subject1 + " exam.");
+	
+	if(mark2 > 50) {
+	System.out.println("Congratulations! You have passed " + subject2 + " exam.");	
+	}
+	else 
+	System.out.println("You have failed " + subject2 + " exam.");
+	
+	if(mark1>mark2) {
+	System.out.println("You have got higher marks for " + subject1 + " than " + subject2 + ".");
+	}
+	else
+    System.out.println("You have got higher marks for " + subject2 + " than " + subject1 + ".");
+	
+	
+	}
+
+}
