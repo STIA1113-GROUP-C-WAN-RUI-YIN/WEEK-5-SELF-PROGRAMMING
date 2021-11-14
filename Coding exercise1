@@ -1,17 +1,21 @@
 package Lesson;
 import java.util.Scanner;
 public class Exercise1 {
+
 /*	Markah penuh 100
 	Guna scanner input:
 	    Masukkan dua subject dan markah
 	    Nyatakan subjek yang mempunyai markah lebih besar daripada 50, calon di kira lulus
 	    Nyatakan subjek mana yang lebih besar markah dan mana yang lebih kecil  */
+	    
+	    
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	Scanner scan = new Scanner (System.in);	
-    final int fullmarks = 100;
-    
-    System.out.println("Please insert subject 1. ");
+       final int fullmarks = 100;
+
+    //GET THE INPUT FROM USER ABOUT SUBJECTS AND MARKS
+        System.out.println("Please insert subject 1. ");
 	String subject1 = scan.nextLine();
 	System.out.println("Please insert subject 2. ");
 	String subject2 = scan.nextLine();
@@ -20,23 +24,26 @@ public class Exercise1 {
 	System.out.println("Please insert your mark for subject 2. ");
 	int mark2 = scan.nextInt();
 	
-	if(mark1 > 50) {
+    // CHECK IF USER PASSES FIRST SUBJECT 
+	if(mark1 > 50 && mark1 <= fullmarks) {
 	System.out.println("Congratulations! You have passed " + subject1 + " exam.");	
 	}
 	else 
 	System.out.println("You have failed " + subject1 + " exam.");
 	
-	if(mark2 > 50) {
+   // CHECK IF USER PASSES SECOND SUBJECT 
+	if(mark2 > 50 && mark2 <= fullmarks) {
 	System.out.println("Congratulations! You have passed " + subject2 + " exam.");	
 	}
 	else 
 	System.out.println("You have failed " + subject2 + " exam.");
 	
+   // CHECK IF FIRST SUBJECT HAD THE HIGHER MARKS THAN SECOND SUBJECT OR VICE VERSA
 	if(mark1>mark2) {
 	System.out.println("You have got higher marks for " + subject1 + " than " + subject2 + ".");
 	}
 	else
-    System.out.println("You have got higher marks for " + subject2 + " than " + subject1 + ".");
+        System.out.println("You have got higher marks for " + subject2 + " than " + subject1 + ".");
 	
 	
 	}
